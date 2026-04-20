@@ -27,7 +27,8 @@ app.get('/students', async (req, res) => {
   res.json(result.rows);
 });
 
-app.listen(3000, () =>
-  console.log('Server running at http://localhost:3000')
-//console.log(req.body);
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () =>
+  console.log(`Server running on port ${PORT}`)
 );
